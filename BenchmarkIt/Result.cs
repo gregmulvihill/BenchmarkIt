@@ -142,7 +142,7 @@ namespace BenchmarkIt
             var originalColor = Console.ForegroundColor;
 
             // header
-            var header = string.Join("", _timeResultColumns.Select(c => c.Header.PadRight(c.Width)));
+            var header = string.Join("", _timeResultColumns.Select(c => c.Header.PadRight(c.Width)).ToArray());
             Console.WriteLine(header);
 
             // results columns
@@ -207,7 +207,7 @@ namespace BenchmarkIt
             var originalColor = Console.ForegroundColor;
 
             // header
-            var header = string.Join("", _iterationResultColumns.Select(c => c.Header.PadRight(c.Width)));
+            var header = string.Join("", _iterationResultColumns.Select(c => c.Header.PadRight(c.Width)).ToArray());
             Console.WriteLine(header);
 
             // results columns
